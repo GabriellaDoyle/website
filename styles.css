@@ -1,0 +1,144 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 11px;
+    font-family: Calibri, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat center;
+    background-size: cover;
+/* Backgound is photography I found online and further edited in photoshop so the colours matched the websites design */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background:rgb(104, 158, 246);
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color:aliceblue;
+    user-select: none;
+    
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navigation .btnRegister-popup {
+    width: 120px;
+    height: 50px;
+    background: rgb(137,200,46);
+    border: 2px solid aliceblue;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    color: aliceblue;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: aliceblue;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+} 
+
+.navigation .btnRegister-popup:hover {
+    background: aliceblue;
+    color: black;
+}
+
+.bg { 
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+}
+
+
+.wrapper {
+    text-align-last: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 360px;
+    height: 180px;
+    background:  rgba(137,200,46);
+    border: 4px solid rgba(28, 28, 28);
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.back-text {
+    width: max-content;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-text-stroke: 10px rgba(105, 150, 202, 0.9);
+    -webkit-text-fill-color: transparent;
+
+} 
+
+.back-text span {
+    display: inline-block;
+    font-size: 210px;
+    font-weight: 700;
+    -webkit-text-stroke: 2px rgba(105, 150, 202, 0.741);
+    -webkit-text-fill-color: transparent;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 5s, opacity 1.6s;
+    position: relative;
+    z-index: 999
+}
+
+.back-text span.active {
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+.btn {    
+    background: rgb(231,0,100);
+}
